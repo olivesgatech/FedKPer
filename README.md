@@ -13,3 +13,14 @@ python3 [path-to-repo-location]/main.py --seed=1 --partition_method="dirichlet" 
 In the above example, --sample_ratio is the percentage of clients sampled each round. --n_rounds is the number of total communication rounds. --n_clients is the total number of clients created. You can control the exact algorithm you are running by changing the --config_path.
 
 In federated learning, we also simulate label heterogeneity experiments, where we purposefully make the clients have different label distributions. For instance, maybe client 0 has classes 0 and 1, while client 1 has classes 2 and 3. Clients having heterogeneous label distributions tends to cause the performance of FL algorithms to deteriorate. One of the ways we simulate this data heterogeneity is via a Dirichlet distribution (--partition_method='dirichlet'), which is controlled by an alpha parameter (--partition_alpha) that makes the client partition more heterogeneous.
+
+## Citation
+Z. Fowler and G. AlRegib, "FedKPer: Tackling Generalization and Personalization in Medical Federated Learning via Knowledge Personalization," in IEEE International Conference on Image Processing (ICIP), accepted on 30 April 2026.
+```
+@inproceedings\{fowler2026fedkper,
+author={Z. Fowler and G. AlRegib},
+booktitle={IEEE International Conference on Image Processing},
+title={FedKPer: Tackling Generalization and Personalization in Medical Federated Learning via Knowledge Personalization},
+year={2026}}
+}
+```
