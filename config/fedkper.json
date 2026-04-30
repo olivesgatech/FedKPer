@@ -1,0 +1,40 @@
+{
+    "data_setups":{
+        "date": "12-26-24",
+        "root": "./data",
+        "base_folder": "/home/zoe/GhassanGT Dropbox/Zoe Fowler/Zoe/InSync/BIGandDATA/Federated_Learning",
+        "dataset_name": "cifar10",
+        "batch_size": 50,
+        "n_clients": 100,
+        "partition": {
+            "method": "iid",
+            "alpha": 0.1
+        }
+    },
+    "train_setups":{
+        "algo": {
+            "name": "fedkper",
+            "params": {}
+        },
+        "scenario": {
+            "n_rounds": 200,
+            "sample_ratio": 0.5,
+            "local_epochs": 5,
+            "device": "cuda:0"
+        },
+        "model":{
+            "name": "fedavg_cifar",
+            "params": {}
+        },
+        "optimizer":{
+            "params": {"lr": 0.01, "momentum":0.9, "weight_decay": 1e-5}
+        },
+        "scheduler":{
+            "enabled": true,
+            "name": "step",
+            "params": {"gamma":0.99, "step_size": 1}
+        },
+        "seed": 1
+    }
+}
+
