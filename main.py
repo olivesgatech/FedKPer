@@ -118,11 +118,11 @@ def main(args):
 
 # Parser arguments for terminal execution
 parser = argparse.ArgumentParser(description="Process Configs")
-parser.add_argument("--root_path", default="/home/zoe/GhassanGT Dropbox/Zoe Fowler/Zoe/InSync/PhDResearch/Code/FedKPer", type=str)
+parser.add_argument("--root_path", default="/root/FedKPer", type=str)
 parser.add_argument("--date", type=str)
 parser.add_argument("--root", default="./data", type=str)
-parser.add_argument("--base_folder", default="/home/zoe/GhassanGT Dropbox/Zoe Fowler/Zoe/InSync/BIGandDATA/Federated_Learning/", type=str)
-parser.add_argument("--config_path", default="/config/fedavg.json", type=str)
+parser.add_argument("--base_folder", default="Results/", type=str)
+parser.add_argument("--config_path", default="/config/fedkper.json", type=str)
 parser.add_argument("--dataset_name", type=str)
 parser.add_argument("--n_clients", type=int)
 parser.add_argument("--batch_size", type=int)
